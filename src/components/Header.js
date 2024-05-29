@@ -22,7 +22,7 @@ const Header = () => {
   const searchQuery = URLSearch.getAll("q")
   const [search, setSearch] = useState(searchQuery)
   const dropdownRef = useRef(null);
-
+console.log(user)
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
