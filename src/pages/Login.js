@@ -13,8 +13,7 @@ const Login = () => {
         email: "",
         password: ""
     })
-    const user = useSelector(state => state?.user?.user);
-    console.log('User State:', user);
+    
     
     const navigate = useNavigate()
     const { fetchUserDetails, fetchUserAddToCart } = useContext(Context)
