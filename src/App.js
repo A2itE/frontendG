@@ -30,7 +30,7 @@ function App() {
       }else {
       console.error("Failed to fetch user details:", dataApi.message);
     } 
-        console.log("current user : ",dataApi.data);
+        console.log("current user message : ",dataApi.message);
       }catch (error) {
     console.error("Error fetching user details:", error);
   }
