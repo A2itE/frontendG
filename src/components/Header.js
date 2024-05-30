@@ -72,7 +72,7 @@ const Header = () => {
     setMenuDisplay(false);
   };
 
-console.log("header user: "+user)
+console.log("header user: ",user)
   return (
     <header className='h-16 shadow-md bg-[#FFC94A] fixed w-full z-40'>
       <div className='h-full container mx-auto flex items-center px-4 justify-between'>
