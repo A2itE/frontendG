@@ -43,6 +43,7 @@ const Login = () => {
         })
 
         const dataApi = await dataResponse.json()
+        console.log("data login data" ,dataApi);
 
         if (dataApi.success) {
             toast.success(dataApi.message)
