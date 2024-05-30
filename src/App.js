@@ -22,7 +22,7 @@ function App() {
       })
 
       const dataApi = await dataResponse.json()
-    console.log(dataApi);
+    console.log("current user : "+dataApi);
 
       if(dataApi.success){
         dispatch(setUserDetails(dataApi.data))
