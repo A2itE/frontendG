@@ -16,6 +16,7 @@ function App() {
   const [cartProductCount,setCartProductCount] = useState(0)
 
   const fetchUserDetails = async()=>{
+      try {
       const dataResponse = await fetch(SummaryApi.current_user.url,{
         method : SummaryApi.current_user.method,
         credentials : 'include'
@@ -26,7 +27,12 @@ function App() {
 
       if(dataApi.success){
         dispatch(setUserDetails(dataApi.data))
-      }
+      }else {
+      console.error("Failed to fetch user details:", dataApi.message);
+    } 
+      }catch (error) {
+    console.error("Error fetching user details:", error);
+  }
   }
 
   const fetchUserAddToCart = async()=>{
