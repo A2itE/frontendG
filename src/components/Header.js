@@ -22,7 +22,7 @@ const Header = () => {
   const searchQuery = URLSearch.getAll("q")
   const [search, setSearch] = useState(searchQuery)
   const dropdownRef = useRef(null);
-console.log("header user: "+user)
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -72,7 +72,7 @@ console.log("header user: "+user)
     setMenuDisplay(false);
   };
 
-
+console.log("header user: "+user)
   return (
     <header className='h-16 shadow-md bg-[#FFC94A] fixed w-full z-40'>
       <div className='h-full container mx-auto flex items-center px-4 justify-between'>
