@@ -139,6 +139,10 @@ const Cart = () => {
                 </div>
                 <div className='flex flex-col mt-5 mb-5 lg:flex-row gap-10 lg:justify-between p-4'>
                     <div className='w-full max-w-3xl'>
+                                    <Lottie
+                                        className="w-full max-w-sm rounded-full"
+                                        animationData={animateDrone}
+                                    />
                         {
                             loading ? (
                                 loadingCart.map((el, index) => {
@@ -152,10 +156,7 @@ const Cart = () => {
                                     return (
                                         
                                       <>
-                                      <Lottie
-                                        className="w-full ml-40 max-w-sm rounded-full"
-                                        animationData={animateDrone}
-                                    />
+                                     
                                         <div key={product?._id + "Add To Cart Loading"} className='w-full bg-white h-32 my-2 border border-slate-300 rounded grid grid-cols-[128px,1fr]'>
                                             <div className='w-32 h-32 bg-slate-200'>
                                                 <img src={product?.productId?.productImage[0]} className='w-full h-full object-scale-down mix-blend-multiply' />
